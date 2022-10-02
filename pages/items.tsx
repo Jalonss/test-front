@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next'
 
 const ItemList: NextPage = () => {
@@ -9,4 +9,4 @@ const ItemList: NextPage = () => {
     )
 }
 
-export default ItemList;
+export default ItemList

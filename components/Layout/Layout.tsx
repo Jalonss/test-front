@@ -1,9 +1,15 @@
-import React from 'react';
+import React from 'react'
+import SearchBar from '../SearchBar/SearchBar'
 
-export default function Layout() {
+type Props = {
+    children?: React.ReactNode
+}
+
+export default function Layout({ children }: Props) {
     return (
         <div>
-            <h1>This is for containt all</h1>
+            <SearchBar />
+            {children}
         </div>
     )
 }
