@@ -1,0 +1,99 @@
+@import "_colors";
+
+.routeMap {
+  //position: absolute;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 80%;
+  font-size: 14px;
+  margin: auto;
+  color: $seconday-grey;
+}
+.card {
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  //width: 80%;
+  //margin: auto;
+  //text-align: center;
+  //font-family: arial;
+  //border: 1em;
+  //display: flex;
+  //padding: 16px;
+  width: 80%;
+  margin: auto;
+  margin: auto;
+  background-color: $primary-white;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+
+  //flex-wrap: nowrap;
+}
+
+.card .productImage {
+  border-radius: 4px;
+  padding-right: 16px;
+  width: 180px;
+  height: 180px;
+}
+
+.card .details {
+  flex-wrap: wrap;
+  flex-direction: row;
+  //width: 80%;
+  //display: flex;
+  //flex-wrap: wrap;
+}
+.headPrice {
+  //display: flex;
+  //flex-direction: row;
+  //flex-wrap: nowrap;
+  //align-items: center;
+  //height: 24px;
+  //align-items: flex-start;
+  //width: 32px;
+  //position: relative;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-bottom: 32px;
+  min-width: 740px;
+}
+.price .label {
+  font-size: 24px;
+  min-width: 32px;
+}
+
+.description {
+  font-size: 18px;
+  width: 32px;
+  //width: 10%;
+  //justify-content: flex-start;
+}
+
+.stock {
+  color: grey;
+  font-size: 18px;
+  width: 32px;
+  //width: 10%;
+  //justify-content: flex-start;
+}
+
+.ldabel {
+  color: grey;
+  font-size: 12px;
+  width: 200px;
+}
+
+.headPrice .shipping {
+  background: url($ic-shipping-big);
+  background-repeat: no-repeat;
+  //background-position: center;
+
+  //margin-right: -48px;
+  //float: right
+
+  //  height:100%;
+  //width:100%;
+}
