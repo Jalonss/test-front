@@ -1,50 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 //import Image from 'next/image'
 import { useRouter } from 'next/router';
 import styles from "../../styles/CardProduct.module.scss";
-import shipping from '../../Assets/ic_shipping.png'
 import Shipping from '../Shipping/Shipping';
 import { Image } from '../Image';
-interface IProducDetails {
-    srcImage: string;
-    price: number;
-    description: string;
-    condition: string;
-    label: string;
-    id: string;
-    delevery: boolean;
-}
-interface IProduct {
-    products: IProducDetails[];
-}
+import { getItemsList } from '../../services/Items/items.service';
+import { IItem, IListItems } from '../../utils/interfaces';
 
-export default function ItemList({ products }: IProduct) {
+
+export default function ItemList() {
     const router = useRouter();
-    const handleDetails = () => router.push('/items/4')
+    const [listItems, setListItems] = useState<IItem[]>();
+    const obtenerProductos = () => {
+        const query = router?.query?.search;
+        getItemsList(`${query}`).then((res: IListItems) => {
+            const { items } = res;
+            setListItems(items);
+        }).catch(error => {
+            //Todo: show a message error could be modal or notification even a error page
+            console.log(error);
+        })
+    };
+    useEffect(() => {
+        router.query.search && obtenerProductos();
+    }, [router]);
     return (
         <>
             {
-                products.map(({ id, srcImage, price, description, condition, label, delevery }: IProducDetails) =>
-                    <div key={id} className={styles.card}>
-                        <Image className={styles.productImage} srcImage={srcImage} />
+                listItems?.map((i) =>
+                    <div key={i.id} className={styles.card}>
+                        <Image className={styles.productImage} srcImage={i.picture} />
                         <div className={styles.details}>
                             <div className={styles.price}>
                                 <span className={styles.label}>
-                                    {`$${price.toLocaleString('us-EN')}`}
+                                    {`$${i.price.amount.toLocaleString(i.price.currency)}`}
                                 </span>
                                 <span>
-                                    {delevery && <Shipping/>}
+                                    {i.free_shipping && <Shipping />}
                                 </span>
                             </div>
                             <div>
-                                <span>{description}</span>
+                                <span>{i.title}</span>
                             </div>
                             <div>
-                                <span>{condition}</span>
+                                <span>{i.condition}</span>
                             </div>
                         </div>
                         <div>
-                            <span>{label}</span>
+                            <span>{i.address}</span>
                         </div>
                     </div>
                 )

@@ -24,7 +24,7 @@
   background-color: $primary-white;
   display: flex;
   flex-direction: row;
-  padding: 16px;
+  padding: 16px
 
   //flex-wrap: nowrap;
 }
@@ -34,11 +34,13 @@
   padding-right: 16px;
   width: 180px;
   height: 180px;
+  
 }
 
 .card .details {
   flex-wrap: wrap;
   flex-direction: row;
+
   //width: 80%;
   //display: flex;
   //flex-wrap: wrap;
