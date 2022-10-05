@@ -1,7 +1,7 @@
 import { IListItems, IRespond, IRespondItemsList } from "../../utils/interfaces";
 import axiosRequest from "../instances/axiosInstance";
 
-const getItemsList = (query: string): Promise<IListItems> => axiosRequest.get(`/search?limit=4&q=${query}`).then(usersTransform)
+const getItemsList = (query: string): Promise<IListItems> => axiosRequest.get(`/search?limit=4&q=${query}`).then(usersTransform);
 
 const usersTransform = (respond: IRespond): IListItems => {
     const { data } = respond;
