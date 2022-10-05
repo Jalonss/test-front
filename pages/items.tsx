@@ -1,12 +1,16 @@
 import React from 'react'
 import type { NextPage } from 'next'
+import ItemList from '../components/Item/ItemList'
+import RouteMap from '../components/Item/RouteMap'
 
-const ItemList: NextPage = () => {
+const Item: NextPage = () => {
     return (
-        <div>
-            <h1>This is for Item List</h1>
-        </div>
+        <>
+            <RouteMap />
+            <ItemList />
+        </>
+
     )
 }
 
-export default ItemList
+export default Item

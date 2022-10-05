@@ -1,0 +1,56 @@
+@import "_colors";
+@import "_medidas";
+
+.routeMap {
+  margin: auto;
+  padding-top: $padding-desktop;
+  padding-bottom: $padding-desktop;
+  width: $w-desktop;
+  font-size: $f-route-map;
+  color: $seconday-grey;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: $w-desktop;
+  background-color: $primary-white;
+  .productImage {
+    margin: $padding-desktop;
+    width: $img-size-q-desktop;
+    height: $img-size-q-desktop;
+    cursor: pointer;
+  }
+  .details {
+    flex-wrap: wrap;
+    flex-direction: row;
+    .price {
+      display: flex;
+      flex-direction: row;
+      min-width: 740px;
+      padding-bottom: $m-desktop;
+      padding-top: $m-desktop;
+      gap: $gap-desktop;
+      font-size: $f-size-label-desktop;
+    }
+  }
+}
+
+.sectionAddress {
+  padding-bottom: $m-desktop;
+  padding-top: $m-desktop;
+  .address {
+    font-size: $f-size-12-desktop;
+    padding-bottom: $m-desktop;
+    padding-top: $m-desktop;
+  }
+}
+
+.information {
+  span {
+    display: flex;
+    flex-direction: row;
+    font-size: $f-size-desktop;
+  }
+}

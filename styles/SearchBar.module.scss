@@ -4,12 +4,8 @@
     width: 100%;
     overflow: hidden;
     background-color: $primary-bar;
-    margin: auto;
-    //min-height: 52px;
-    //justify-content: center;
-    //margin-bottom: 16px;
-    float: left;
-    display: block;
+
+
 }
 
 .container {
@@ -35,12 +31,12 @@
     border: none;
     border-radius: 0.2em 0 0 0.2em;
     outline: none;
-}
-.searchbutton {
-    z-index: 10;
-    border: none;
-    padding: 4px;
     background-color: $primary-white;
+}
+.searchbutton {    
+    border: none;
+    padding: 10px;
+    background-color: $primary-grey;
     border-radius: 0 0.2em 0.2em 0;
     cursor: pointer;
 }
