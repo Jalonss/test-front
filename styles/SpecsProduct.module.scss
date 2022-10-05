@@ -25,14 +25,9 @@
   .details {
     flex-wrap: wrap;
     flex-direction: row;
-    .price {
+    span {
       display: flex;
-      flex-direction: row;
-      min-width: 740px;
-      padding-bottom: $m-desktop;
-      padding-top: $m-desktop;
-      gap: $gap-desktop;
-      font-size: $f-size-label-desktop;
+      margin: auto;
     }
   }
 }
@@ -69,7 +64,6 @@
 }
 
 .btn {
-  width: 80%;
   background-color: $primary-btn-blue;
   padding: 10px;
   border-radius: 4px;
