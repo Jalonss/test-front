@@ -3,7 +3,7 @@ import React from 'react';
 type props = {
     srcImage: string;
     className: string;
-    onClick: () => void
+    onClick?: () => void
 }
 export const Image = ({
     srcImage,

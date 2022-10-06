@@ -1,72 +1,88 @@
 @import "_colors";
 @import "_medidas";
+@import "_common";
+@import "Button.module";
 
-.routeMap {
-  margin: auto;
-  padding-top: $padding-desktop;
-  padding-bottom: $padding-desktop;
-  width: $w-desktop;
-  font-size: $f-route-map;
-  color: $seconday-grey;
-}
 
-.card {
+.sectionHead {
   display: flex;
-  flex-direction: row;
-  margin: auto;
-  width: $w-desktop;
-  background-color: $primary-white;
-  .productImage {
-    margin: $padding-desktop;
-    width: $img-size-q-desktop;
-    height: $img-size-q-desktop;
-    cursor: pointer;
-  }
-  .details {
-    flex-wrap: wrap;
+}
+@media (min-width: $breakpoint-tablet) {
+  .sectionHead {
     flex-direction: row;
+    padding: 32px;
+  }
+  .productImage {
+    width: 680px;
+    height: 680px;
+  }
+  .information {
+    padding-left: 32px;
     span {
       display: flex;
-      margin: auto;
+      flex-direction: row;
+    }
+  }
+  .priceInformation {
+    font-size: 46px;
+    padding: 32px 0px 32px 0px;
+    [role="decimals"] {
+      padding-top: 0.5vh;
+      font-size: 24px;
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    max-width: 680px;
+    padding: 0px 0px 32px 32px;
+    text-align: justify;
+    [role="title"] {
+      font-size: 28px;
+      padding: 0px 0px 32px 0px;
+    }
+    [role="description"] {
+      font-size: 16px;
     }
   }
 }
 
-.sectionAddress {
-  padding-bottom: $m-desktop;
-  padding-top: $m-desktop;
-  .address {
-    font-size: $f-size-12-desktop;
-    padding-bottom: $m-desktop;
-    padding-top: $m-desktop;
+@media (max-width: calc($breakpoint-tablet - 1px)) {
+  .sectionHead {
+    flex-direction: column;
+    padding: 16px;
+  }
+  .productImage {
+    width: 100%;
+    height: 100%;
+  }
+  .information {
+    span {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .priceInformation {
+    font-size: 46px;
+    text-align: center;
+    [role="decimals"] {
+      font-size: 32px;
+    }
+   
+  }
+  .description {
+    font-size: 16px;
+    padding: 0px 16px 16px 16px;
+    text-align: justify;
   }
 }
 
-.information {
-  span {
-    display: flex;
-    flex-direction: row;
-    font-size: $f-size-desktop;
-  }
+.condition {
+  font-size: 12px;
+  padding-bottom: 16px;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.descriptionItem {
-  margin: 16px;
-  width: 600px;
-  
-}
-
-.productSpecs {
-  margin: $padding-desktop;
-  width: 680px;
-  height: 680px;
-  cursor: pointer;
-}
-
-.btn {
-  background-color: $primary-btn-blue;
-  padding: 10px;
-  border-radius: 4px;
-  color: $primary-white;
-  cursor: pointer;
-}

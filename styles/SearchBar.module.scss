@@ -4,8 +4,6 @@
     width: 100%;
     overflow: hidden;
     background-color: $primary-bar;
-
-
 }
 
 .container {
@@ -13,29 +11,29 @@
     height: auto;
     margin: 0 auto;
     padding: 10px;
-    position: relative;
-    display: flex;
+    display: flex;   
 }
 
 .searchcontainer {
     width: 100%;
     padding-left: 1em;
     overflow: hidden;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     height: 2.2em;
 }
 
 .textsearch {
     width: 100%;
-    min-height: 50%;
     border: none;
     border-radius: 0.2em 0 0 0.2em;
     outline: none;
     background-color: $primary-white;
+    padding-left: 12px;
 }
 .searchbutton {    
     border: none;
-    padding: 10px;
+    padding: 8px; 
     background-color: $primary-grey;
     border-radius: 0 0.2em 0.2em 0;
     cursor: pointer;
