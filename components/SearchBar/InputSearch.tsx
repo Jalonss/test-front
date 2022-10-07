@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../styles/SearchBar.module.scss'
 import { useRouter } from 'next/router'
-import ButtonIcon from '../Button/ButtonIcon'
+import ButtonAction from '../Button/ButtonAction'
 import InputForm from '../Input/InputSearch'
 import isEmty from '../../utils/isEmpty'
 import IconSearch from '../Icons/IconSearch'
@@ -26,9 +26,9 @@ export default function InputSearch() {
                 className={styles.textsearch}
                 handleChange={handleChange}
             />
-            <ButtonIcon type="button" className={styles.searchbutton} onClick={handleSubmit} >
+            <ButtonAction type="button" className={styles.searchbutton} onClick={handleSubmit} >
                 <IconSearch />
-            </ButtonIcon>
+            </ButtonAction>
         </form>
     )
 }

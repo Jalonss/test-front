@@ -1,60 +1,82 @@
-export interface IRespondItemsList {
-
+export interface IItem {
+    author: {
+        name: string
+        lastname: string
+    },
+    categories: [string],
     id: string,
     title: string,
-    price: {
-        currency: string,
-        amount: number,
-        decimals: string | number
-    },
     picture: string,
     condition: string,
-    shipping: { free_shipping: boolean },
-    prices: {
-        presentation: {
-            display_currency: string
-        },
-        prices: {
-            amount: number
-        }[]
-    }
-    currency_id: string,
+    //free_shipping: boolean,
+    price: {
+        currency_id: string,
+        amount: number,
+        decimals: number
+    },
     thumbnail: string,
-    address: { state_name: string }
-
+    shipping: {
+        free_shipping: boolean
+    },
+    address: {
+        state_name: string
+    }
 }
-export interface IItem {
+export interface IRespondAPI {
+    results: IItem[];
+}
+
+export interface IRespondeItem {
+    author: {
+        name: string
+        lastname: string
+    },
     id: string,
     title: string,
     price: {
         currency: string,
-        amount: number,
-        decimals: string | number
+        amount: number
+        decimals: string
     },
     picture: string,
     condition: string,
     free_shipping: boolean,
     address: string
 }
-export interface IAuthor {
-    name: string;
-    lastname: string;
+
+
+
+export interface IItemR {
+    data: {
+        original_price: number;
+        price: number;
+        id: string;
+        title: string;
+        currency_id: string;
+        pictures: {
+            secure_url: string;
+        }[];
+        condition: string;
+        shipping: {
+            free_shipping: boolean;
+        }; seller_address: {
+            state: {
+                name: string;
+            };
+        };
+        sold_quantity: number;
+    };
 }
 
-export interface IListItems {
-    author: IAuthor,
-    categories: string[],
-    items: IItem[]
-
+export interface IDescription {
+    data: {
+        plain_text: string;
+    }
 }
 
-export interface IResult {
-    results: IRespondItemsList[];
-    available_filters: INameCategory[];
-}
-export interface INameCategory {
-    name: string;
-}
-export interface IRespond {
-    data: IResult
+export interface ICurrency {
+    data: {
+        description: string;
+        decimal_places: number;
+    }
 }

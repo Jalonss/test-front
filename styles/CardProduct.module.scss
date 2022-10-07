@@ -54,3 +54,25 @@
     font-size: $f-size-desktop;
   }
 }
+
+.descriptionItem {
+  margin: 16px;
+  width: 600px;
+  
+}
+
+.productSpecs {
+  margin: $padding-desktop;
+  width: 680px;
+  height: 680px;
+  cursor: pointer;
+}
+
+.btn {
+  width: 80%;
+  background-color: $primary-btn-blue;
+  padding: 10px;
+  border-radius: 4px;
+  color: $primary-white;
+  cursor: pointer;
+}
