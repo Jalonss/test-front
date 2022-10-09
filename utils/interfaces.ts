@@ -1,16 +1,11 @@
-export interface IItem {
-    author: {
-        name: string
-        lastname: string
-    },
-    categories: [string],
+export interface IListItem {
     id: string,
     title: string,
     picture: string,
     condition: string,
-    //free_shipping: boolean,
+    free_shipping: boolean,
     price: {
-        currency_id: string,
+        currency: string,
         amount: number,
         decimals: number
     },
@@ -18,65 +13,19 @@ export interface IItem {
     shipping: {
         free_shipping: boolean
     },
-    address: {
-        state_name: string
-    }
+    address: string,
 }
-export interface IRespondAPI {
-    results: IItem[];
-}
-
-export interface IRespondeItem {
-    author: {
-        name: string
-        lastname: string
-    },
+export interface ISpecsItem {
     id: string,
     title: string,
-    price: {
-        currency: string,
-        amount: number
-        decimals: string
-    },
     picture: string,
     condition: string,
+    description: string,
     free_shipping: boolean,
-    address: string
-}
-
-
-
-export interface IItemR {
-    data: {
-        original_price: number;
-        price: number;
-        id: string;
-        title: string;
-        currency_id: string;
-        pictures: {
-            secure_url: string;
-        }[];
-        condition: string;
-        shipping: {
-            free_shipping: boolean;
-        }; seller_address: {
-            state: {
-                name: string;
-            };
-        };
-        sold_quantity: number;
-    };
-}
-
-export interface IDescription {
-    data: {
-        plain_text: string;
-    }
-}
-
-export interface ICurrency {
-    data: {
-        description: string;
-        decimal_places: number;
-    }
+    price: {
+        currency: string,
+        amount: number,
+        decimals: number
+    },
+    sold_quantity: number
 }
