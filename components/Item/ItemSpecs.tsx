@@ -1,15 +1,15 @@
 import React from 'react';
 import { Image } from '../Image'
 import styles from "../../styles/SpecsProduct.module.scss";
-import { ISpecsItem } from '../../utils/interfaces';
+
 import ButtonAction from 'components/Button/ButtonAction';
+import { ISpecsItem } from 'utils/interfaces';
 
 type Props = {
     specs: ISpecsItem
 }
 
 export default function ItemSpecs({ specs }: Props) {
-    console.log('spect: ', specs)
     return (
         <div className={styles.container}>
             <div className={styles.sectionHead}>
@@ -24,7 +24,7 @@ export default function ItemSpecs({ specs }: Props) {
                     <span className={styles.priceInformation}>
                         <span>$</span>
                         <span className={styles.decim}>{specs.price?.amount.toLocaleString('ARS')}</span>
-                        <span role='decimals'>{specs.price?.decimal}</span>
+                        <span role='decimals'>{specs.price.decimals || '00'}</span>
                     </span>
                     <span className={styles.btnBlue}><ButtonAction className={styles.btnBlue}>Comprar</ButtonAction></span>
                 </div>
