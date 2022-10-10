@@ -7,9 +7,10 @@ type Props = {
     placeholder?: string;
     autoComplete?: string;
     handleChange: React.ChangeEventHandler<HTMLInputElement>;
+    role?: string;
 }
 
-export default function InputForm({ type, name, className, placeholder = '', autoComplete = 'off', handleChange }: Props) {
+export default function InputForm({ type, name, className, placeholder = '', autoComplete = 'off', handleChange, role }: Props) {
     return (
         <input
             type={type}
@@ -18,6 +19,7 @@ export default function InputForm({ type, name, className, placeholder = '', aut
             placeholder={placeholder}
             autoComplete={autoComplete}
             onChange={handleChange}
+            role={role}
         />
     )
 }

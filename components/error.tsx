@@ -6,7 +6,7 @@ import sorry from '../Assets/sorry.png'
 export const ErrorHandler = () => {
     return (
         <>
-            <div className={styles.container}>
+            <div className={styles.container} role={'error-not-find'}>
                 <div className={styles.display}>
                     <div className={styles.sorry}>
                         <Image

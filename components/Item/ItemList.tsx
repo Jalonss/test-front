@@ -10,12 +10,12 @@ type Props = {
 }
 export default function ItemList({ items = [], onClick }: Props) {
     return (
-        <>
+        <div role={'items-list'}>
             {
-                items.map((i) =>
-                    <div key={i.id}>
+                items.map((i,index) =>
+                    <div key={i.id} role={`item-card-${index}`}>
                         <div className={styles.card}>
-                            <Image className={styles.productImage} srcImage={i.picture} onClick={() => onClick(i.id)} />
+                            <Image role={`item-image-${index}`} className={styles.productImage} srcImage={i.picture} onClick={() => onClick(i.id)} />
                             <div className={styles.details}>
                                 <div className={styles.price}>
                                     <span>
@@ -35,9 +35,9 @@ export default function ItemList({ items = [], onClick }: Props) {
                             </div>
                         </div>
                     </div>
-                )
-            }
-        </>
+    )
+}
+        </div >
     );
 }
 

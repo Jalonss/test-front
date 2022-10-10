@@ -1,11 +1,13 @@
 import React from 'react';
 
 type props = {
+    role: string;
     srcImage: string;
     className: string;
-    onClick?: () => void
+    onClick?: () => void;
 }
 export const Image = ({
+    role,
     srcImage,
     className,
     onClick
@@ -16,6 +18,7 @@ export const Image = ({
             type="image/png"
             className={className}
             onClick={onClick}
+            role={role}
         >
             <img
                 className={className}
