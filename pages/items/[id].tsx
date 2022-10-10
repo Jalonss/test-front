@@ -4,7 +4,7 @@ import ItemSpecs from '../../components/Item/ItemSpecs'
 import RouteMap from '../../components/Item/RouteMap'
 import { useRouter } from 'next/router'
 import { getItemsSpecs, transformItemSpecs } from '../../services/Items/items.service'
-import { ErrorHandler } from 'components/error'
+import { ErrorHandler } from '../../components/error'
 import { ISpecsItem } from 'utils/interfaces'
 
 const ItemDetails: NextPage = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from '../Image'
 import styles from "../../styles/SpecsProduct.module.scss";
 
-import ButtonAction from 'components/Button/ButtonAction';
+import ButtonAction from '../../components/Button/ButtonAction';
 import { ISpecsItem } from 'utils/interfaces';
 
 type Props = {
@@ -11,10 +11,10 @@ type Props = {
 
 export default function ItemSpecs({ specs }: Props) {
     return (
-        <div className={styles.container}>
+        <div role={'item-specs'} className={styles.container}>
             <div className={styles.sectionHead}>
                 <div>
-                    <Image srcImage={specs.picture} className={styles.productImage} />
+                    <Image role={'item-image'}srcImage={specs.picture} className={styles.productImage} />
                 </div>
                 <div className={styles.information}>
                     <span className={styles.condition}>

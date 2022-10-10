@@ -10,7 +10,6 @@ const transformItemList = (data: { items: IListItem[] }): IListItem[] => {
     return items;
 }
 const transformItemSpecs = (data: { item: ISpecsItem }): ISpecsItem => {
-    console.log('mmm: ', data)
     const { item } = data;
     return item;
 }

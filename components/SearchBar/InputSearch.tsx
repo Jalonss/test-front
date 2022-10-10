@@ -25,6 +25,7 @@ export default function InputSearch() {
                 placeholder='Nunca dejes de buscar'
                 className={styles.textsearch}
                 handleChange={handleChange}
+                role='input-search'
             />
             <ButtonIcon type="button" className={styles.searchbutton} onClick={handleSubmit} >
                 <IconSearch />
