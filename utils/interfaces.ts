@@ -9,10 +9,6 @@ export interface IListItem {
         amount: number,
         decimals: number
     },
-    thumbnail: string,
-    shipping: {
-        free_shipping: boolean
-    },
     address: string,
 }
 export interface ISpecsItem {
