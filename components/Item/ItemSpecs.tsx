@@ -3,7 +3,7 @@ import { Image } from '../Image'
 import styles from "../../styles/SpecsProduct.module.scss";
 
 import ButtonAction from '../../components/Button/ButtonAction';
-import { ISpecsItem } from 'utils/interfaces';
+import { ISpecsItem } from '../../utils/interfaces';
 
 type Props = {
     specs: ISpecsItem
