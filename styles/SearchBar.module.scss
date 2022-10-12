@@ -11,7 +11,7 @@
     height: auto;
     margin: 0 auto;
     padding: 10px;
-    display: flex;   
+    display: flex;
 }
 
 .searchcontainer {
@@ -31,9 +31,9 @@
     background-color: $primary-white;
     padding-left: 12px;
 }
-.searchbutton {    
+.searchbutton {
     border: none;
-    padding: 8px; 
+    padding: 8px;
     background-color: $primary-grey;
     border-radius: 0 0.2em 0.2em 0;
     cursor: pointer;

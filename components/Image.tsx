@@ -1,17 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 type props = {
-    role: string;
-    srcImage: string;
-    className: string;
-    onClick?: () => void;
+    role: string
+    srcImage: string
+    className: string
+    onClick?: () => void
 }
-export const Image = ({
-    role,
-    srcImage,
-    className,
-    onClick
-}: props) => {
+export const Image = ({ role, srcImage, className, onClick }: props) => {
     return (
         <object
             data={srcImage}
@@ -20,11 +15,7 @@ export const Image = ({
             onClick={onClick}
             role={role}
         >
-            <img
-                className={className}
-                src={srcImage}
-            />
+            <img className={className} src={srcImage} />
         </object>
-    );
+    )
 }
-

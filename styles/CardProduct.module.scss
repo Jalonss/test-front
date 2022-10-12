@@ -1,78 +1,77 @@
-@import "_colors";
-@import "_sizes";
+@import '_colors';
+@import '_sizes';
 
 .routeMap {
-  margin: auto;
-  padding-top: $padding-desktop;
-  padding-bottom: $padding-desktop;
-  width: $w-desktop;
-  font-size: $f-route-map;
-  color: $seconday-grey;
+    margin: auto;
+    padding-top: $padding-desktop;
+    padding-bottom: $padding-desktop;
+    width: $w-desktop;
+    font-size: $f-route-map;
+    color: $seconday-grey;
 }
 
 .card {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  width: $w-desktop;
-  background-color: $primary-white;
-  .productImage {
-    margin: $padding-desktop;
-    width: $img-size-q-desktop;
-    height: $img-size-q-desktop;
-    cursor: pointer;
-  }
-  .details {
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: row;
-    .price {
-      display: flex;
-      flex-direction: row;
-      min-width: 740px;
-      padding-bottom: $m-desktop;
-      padding-top: $m-desktop;
-      gap: $gap-desktop;
-      font-size: $f-size-label-desktop;
+    margin: auto;
+    width: $w-desktop;
+    background-color: $primary-white;
+    .productImage {
+        margin: $padding-desktop;
+        width: $img-size-q-desktop;
+        height: $img-size-q-desktop;
+        cursor: pointer;
     }
-  }
+    .details {
+        flex-wrap: wrap;
+        flex-direction: row;
+        .price {
+            display: flex;
+            flex-direction: row;
+            min-width: 740px;
+            padding-bottom: $m-desktop;
+            padding-top: $m-desktop;
+            gap: $gap-desktop;
+            font-size: $f-size-label-desktop;
+        }
+    }
 }
 
 .sectionAddress {
-  padding-bottom: $m-desktop;
-  padding-top: $m-desktop;
-  .address {
-    font-size: $f-size-12-desktop;
     padding-bottom: $m-desktop;
     padding-top: $m-desktop;
-  }
+    .address {
+        font-size: $f-size-12-desktop;
+        padding-bottom: $m-desktop;
+        padding-top: $m-desktop;
+    }
 }
 
 .information {
-  span {
-    display: flex;
-    flex-direction: row;
-    font-size: $f-size-desktop;
-  }
+    span {
+        display: flex;
+        flex-direction: row;
+        font-size: $f-size-desktop;
+    }
 }
 
 .descriptionItem {
-  margin: 16px;
-  width: 600px;
-  
+    margin: 16px;
+    width: 600px;
 }
 
 .productSpecs {
-  margin: $padding-desktop;
-  width: 680px;
-  height: 680px;
-  cursor: pointer;
+    margin: $padding-desktop;
+    width: 680px;
+    height: 680px;
+    cursor: pointer;
 }
 
 .btn {
-  width: 80%;
-  background-color: $primary-btn-blue;
-  padding: 10px;
-  border-radius: 4px;
-  color: $primary-white;
-  cursor: pointer;
+    width: 80%;
+    background-color: $primary-btn-blue;
+    padding: 10px;
+    border-radius: 4px;
+    color: $primary-white;
+    cursor: pointer;
 }

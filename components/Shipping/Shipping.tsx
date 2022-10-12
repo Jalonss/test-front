@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 import Image from 'next/image'
 import shipping from '../../assets/ic_shipping@2x.png.png'
 
 type IShipping = {
-    className?: string;
+    className?: string
 }
 
 export default function Shipping({ className }: IShipping) {
     return (
-
         <Image
             src={shipping}
             alt="Shipping"
@@ -16,7 +15,5 @@ export default function Shipping({ className }: IShipping) {
             height={32}
             width={32}
         />
-
-    );
+    )
 }
-

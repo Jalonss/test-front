@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styles from '../styles/Error.module.scss'
 import Image from 'next/image'
 import sorry from '../assets/sorry.png'
@@ -21,5 +21,5 @@ export const ErrorHandler = () => {
                 </div>
             </div>
         </>
-    );
+    )
 }

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 import { Image } from '../Image'
-import styles from "../../styles/SpecsProduct.module.scss";
+import styles from '../../styles/SpecsProduct.module.scss'
 
-import ButtonAction from '../../components/Button/ButtonAction';
-import { ISpecsItem } from '../../utils/interfaces';
+import ButtonAction from '../../components/Button/ButtonAction'
+import { ISpecsItem } from '../../utils/interfaces'
 
 type Props = {
     specs: ISpecsItem
@@ -14,7 +14,11 @@ export default function ItemSpecs({ specs }: Props) {
         <div role={'item-specs'} className={styles.container}>
             <div className={styles.sectionHead}>
                 <div>
-                    <Image role={'item-image'}srcImage={specs.picture} className={styles.productImage} />
+                    <Image
+                        role={'item-image'}
+                        srcImage={specs.picture}
+                        className={styles.productImage}
+                    />
                 </div>
                 <div className={styles.information}>
                     <span className={styles.condition}>
@@ -23,10 +27,18 @@ export default function ItemSpecs({ specs }: Props) {
                     <span className={styles.title}>{specs.title}</span>
                     <span className={styles.priceInformation}>
                         <span>$</span>
-                        <span className={styles.decim}>{specs.price?.amount.toLocaleString('ARS')}</span>
-                        <span role='decimals'>{specs.price.decimals || '00'}</span>
+                        <span className={styles.decim}>
+                            {specs.price?.amount.toLocaleString('ARS')}
+                        </span>
+                        <span role="decimals">
+                            {specs.price.decimals || '00'}
+                        </span>
                     </span>
-                    <span className={styles.btnBlue}><ButtonAction className={styles.btnBlue}>Comprar</ButtonAction></span>
+                    <span className={styles.btnBlue}>
+                        <ButtonAction className={styles.btnBlue}>
+                            Comprar
+                        </ButtonAction>
+                    </span>
                 </div>
             </div>
             <div className={styles.description}>
@@ -34,5 +46,5 @@ export default function ItemSpecs({ specs }: Props) {
                 <span role="description">{specs.description}</span>
             </div>
         </div>
-    );
+    )
 }

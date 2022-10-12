@@ -20,14 +20,18 @@ export default function InputSearch() {
     return (
         <form onSubmit={handleSubmit} className={styles.searchcontainer}>
             <InputForm
-                type='text'
-                name='search'
-                placeholder='Nunca dejes de buscar'
+                type="text"
+                name="search"
+                placeholder="Nunca dejes de buscar"
                 className={styles.textsearch}
                 handleChange={handleChange}
-                role='input-search'
+                role="input-search"
             />
-            <ButtonIcon type="button" className={styles.searchbutton} onClick={handleSubmit} >
+            <ButtonIcon
+                type="button"
+                className={styles.searchbutton}
+                onClick={handleSubmit}
+            >
                 <IconSearch />
             </ButtonIcon>
         </form>
