@@ -14,20 +14,21 @@ const ItemDetails: NextPage = () => {
     const router = useRouter()
     const [specsItem, setSpecsItem] = useState<ISpecsItem>()
     const [showError, setShowError] = useState<boolean>(false)
-    const getSpecs = async () => {
-        const id = router?.query?.id
-        try {
-            const listItems: ISpecsItem = await getItemsSpecs(`${id}`).then(
-                (res) => transformItemSpecs(res)
-            )
-            if (!listItems) throw new Error('No se encontraron registros')
-            setSpecsItem(listItems)
-            setShowError(false)
-        } catch (error) {
-            setShowError(true)
-        }
-    }
+
     useEffect(() => {
+        const getSpecs = async () => {
+            const id = router?.query?.id
+            try {
+                const listItems: ISpecsItem = await getItemsSpecs(`${id}`).then(
+                    (res) => transformItemSpecs(res)
+                )
+                if (!listItems) throw new Error('No se encontraron registros')
+                setSpecsItem(listItems)
+                setShowError(false)
+            } catch (error) {
+                setShowError(true)
+            }
+        }
         router.query.id && getSpecs()
     }, [router])
     return (

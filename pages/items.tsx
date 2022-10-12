@@ -14,24 +14,23 @@ const Item = () => {
     const [listItems, setListItems] = useState<IListItem[]>()
     const [showError, setShowError] = useState<boolean>(false)
 
-    const getItems = async () => {
-        const query = router?.query?.search
-        try {
-            const listItems: IListItem[] = await getItemsList(`${query}`).then(
-                (res) => transformItemList(res)
-            )
-            if (!listItems.length)
-                throw new Error('No se encontraron registros')
-            setListItems(listItems)
-            setShowError(false)
-        } catch (error) {
-            setShowError(true)
-        }
-    }
-
     const handleItem = (id: string) => router.push(`/items/${id}`)
 
     useEffect(() => {
+        const getItems = async () => {
+            const query = router?.query?.search
+            try {
+                const listItems: IListItem[] = await getItemsList(
+                    `${query}`
+                ).then((res) => transformItemList(res))
+                if (!listItems.length)
+                    throw new Error('No se encontraron registros')
+                setListItems(listItems)
+                setShowError(false)
+            } catch (error) {
+                setShowError(true)
+            }
+        }
         router.query.search && getItems()
     }, [router])
 
