@@ -5,8 +5,8 @@ Test Práctico - Frontend
 ##This site use
 
 -   react (nextjs)
+-   node v18
 -   typescript
--   jest
 -   sass
 -   jest
 
