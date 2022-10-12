@@ -1,0 +1,9 @@
+@import '_colors';
+
+html,
+body {
+    margin: 0;
+    font-family: $font-stack;
+    background-color: $primary-grey;
+    color: $primary-black;
+}

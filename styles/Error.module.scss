@@ -1,0 +1,29 @@
+@import '_colors';
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 32px;
+}
+
+.display {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: $primary-white;
+    padding: 32px;
+    border-radius: 10px;
+}
+.sorry {
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto;
+}
+
+.message {
+    margin: auto;
+    span {
+        font-weight: bold;
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,40 @@
+@import '_colors';
+
+.topndav {
+    width: 100%;
+    overflow: hidden;
+    background-color: $primary-bar;
+}
+
+.container {
+    width: 80%; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+}
+
+.searchcontainer {
+    width: 100%;
+    padding-left: 1em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 2.2em;
+}
+
+.textsearch {
+    width: 100%;
+    border: none;
+    border-radius: 0.2em 0 0 0.2em;
+    outline: none;
+    background-color: $primary-white;
+    padding-left: 12px;
+}
+.searchbutton {
+    border: none;
+    padding: 8px;
+    background-color: $primary-grey;
+    border-radius: 0 0.2em 0.2em 0;
+    cursor: pointer;
+}

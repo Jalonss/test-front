@@ -1,0 +1,8 @@
+@import '_sizes';
+
+.container {
+    margin: auto;
+    width: $w-desktop;
+    background-color: $primary-white;
+    margin-bottom: 32px;
+}
