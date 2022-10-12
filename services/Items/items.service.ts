@@ -6,6 +6,7 @@ const getItemsList = async (query: string) => axiosRequest.get(`?q=${query}`).th
 const getItemsSpecs = async (id: string) => axiosRequest.get(`/${id}`).then(res => res.data.data);
 
 const transformItemList = (data: { items: IListItem[] }): IListItem[] => {
+    console.log('que onda', data)
     const { items } = data;
     return items;
 }

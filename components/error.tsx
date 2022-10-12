@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/Error.module.scss'
 import Image from 'next/image'
-import sorry from '../Assets/sorry.png'
+import sorry from '../assets/sorry.png'
 
 export const ErrorHandler = () => {
     return (

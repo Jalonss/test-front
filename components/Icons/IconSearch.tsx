@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import iconSearch from '../../Assets/ic_Search.png'
+import iconSearch from '../../assets/ic_Search.png'
 
 export default function IconSearch() {
     return (

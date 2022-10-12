@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
-import shipping from '../../Assets/ic_shipping@2x.png.png'
+import shipping from '../../assets/ic_shipping@2x.png.png'
 
 type IShipping = {
     className?: string;
